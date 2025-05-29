@@ -85,12 +85,15 @@ function renderStyledPreview(headerImgUrl) {
 
     html += '<hr><h4>Steps</h4>';
 
-    formData.steps.forEach((step, index) => {
+        formData.steps.forEach((step, index) => {
+        // Replace \n with <br> for line breaks
+        const formattedDescription = step.description.replace(/\n/g, '<br>');
+
         html += `
             <div class="${index !== 0 ? 'page-break' : ''} mb-4">
                 <h5>Step ${step.step}: ${step.title}</h5>
                 ${step.imageUrl ? `<img src="${step.imageUrl}" alt="Step Image" style="max-width:100%; height:auto; margin-bottom:1rem;" />` : ''}
-                <p>${step.description}</p>
+                <p class='text-justify'>${formattedDescription}</p>
             </div>
         `;
     });
