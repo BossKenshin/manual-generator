@@ -22,7 +22,9 @@ RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev --optimize-autoloader
 RUN cp .env.example .env || true
 
 # Create empty SQLite file to prevent errors if DB_CONNECTION=sqlite
-RUN mkdir -p database && touch database/database.sqlite
+# RUN mkdir -p database && touch database/database.sqlite
+RUN php artisan migrate
+
 
 RUN php artisan key:generate
 
