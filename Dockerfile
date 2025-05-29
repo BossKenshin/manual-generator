@@ -24,6 +24,10 @@ RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev --optimize-autoloader
 # Optional: Ensure .env exists (can customize this)
 RUN cp .env.example .env || true
 
+
+RUN php artisan key:generate
+
+
 # --- 6. Build frontend assets using Vite ---
 RUN npm install && npm run build
 
