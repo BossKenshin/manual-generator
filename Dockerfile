@@ -30,10 +30,6 @@ RUN php artisan key:generate
 
 RUN npm install && npm run build
 
-RUN php artisan config:clear \
-        php artisan route:clear \
-        php artisan view:clear \
-        php artisan cache:clear
 
 RUN php artisan config:cache \
     && php artisan route:cache \
