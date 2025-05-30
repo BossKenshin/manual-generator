@@ -13,4 +13,5 @@ services:
       APP_ENV: production
       APP_KEY: base64:0+kQNmjEc9HBagVSPoAPLSjyDUbnc+wr/3fqMRXa4Ew=
       APP_DEBUG: 'true'
+      
      
