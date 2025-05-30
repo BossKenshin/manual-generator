@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Manuals</title>
-    <link href="{{ asset('build/assets/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('build/assets/app.js') }}"></script>
+    <!-- <link href="{{ asset('build/assets/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('build/assets/app.js') }}"></script> -->
     <!-- <link rel="stylesheet" href="asset('resources/css/app.css')"> -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
